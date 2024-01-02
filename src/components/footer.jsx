@@ -2,8 +2,6 @@ import React from 'react'
 import { IoLogoFacebook } from "react-icons/io5";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
 
 function Footer() {
   return (
@@ -11,7 +9,7 @@ function Footer() {
       <div className='flex flex-col text-center'>
         <div className='text-xl pb-3'>Follow us on</div>
 
-        <div className='mx-auto grid grid-cols-5 gap-3 text-center'>
+        <div className='mx-auto grid grid-cols-3 gap-3 text-center'>
           <div>
             <a href="#"><IoLogoFacebook className='text-xl'/></a>
           </div>
@@ -20,12 +18,6 @@ function Footer() {
           </div>
           <div>
             <a href="#"><FaLinkedin className='text-xl' /></a>
-          </div>
-          <div>
-            <a href="#"><FaYoutube className='text-xl' /></a>
-          </div>
-          <div>
-            <a href="#"><FaSquareXTwitter className='text-xl' /></a>
           </div>
         </div>
 
