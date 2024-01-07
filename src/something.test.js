@@ -1,7 +1,9 @@
-const sum = require('./something')
+const forEach = (items,callBack) => {
+    for (let x = 0; x <= items.length; x++) {
+        callBack(items[x])
+    }
+}
 
-describe('Sum testing', () => {
-    test('Sum is testing', () => {
-        expect(sum(4,5)).toBe(9);
-    });
-});
+test('Mock Callback', () => {
+    const mockCallback = jest.fn(x => 42 + x)
+})
