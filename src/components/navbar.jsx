@@ -5,14 +5,14 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoLogoFacebook } from "react-icons/io5";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import anthro from '../assets/anthropology.png';
+import anthro from '../assets/anthropology.jpg';
 
 function Navbar() {
   const [isToggle, setIsToggle] = useState(false);
   const [aboutIsToggle, setAboutIsToggle] = useState(false);
 
   return (
-    <div className='p-4 w-full bg-white text-slate-900 border-b grid md:flex justify-between'>
+    <div className='p-3 w-full bg-white text-slate-900 drop-shadow shadow-lg grid md:flex justify-between'>
       <Link to="/" className='flex justify-center items-center'>
         <img src={anthro} alt="Image" className="w-[60px]" />
       </Link>
