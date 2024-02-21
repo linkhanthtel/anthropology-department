@@ -22,10 +22,10 @@ function Home() {
       <div className='md:flex justify-center py-10 px-3 bg-gray-200'>
         <div className='flex justify-center items-center'>
           {/* <MdEmail className='text-5xl text-slate-900 flex justify-center' /> */}
-          <input type="text" placeholder='Sign Up to our newsletter' className='mr-3 p-3 rounded-sm h-10 w-full' />
+          <input type="text" placeholder='Sign Up to our newsletter' className='mr-3 p-3 rounded-sm h-10 w-80' />
         </div>
         <div className='flex justify-center items-center md:mt-1'>
-          <button className='p-2 bg-yellow-600 text-white hover:bg-yellow-800 mb-1 md:mt-0'>Subscribe</button>
+          <button className='p-2 bg-yellow-600 text-white hover:bg-yellow-800 mt-2 md:mb-1 md:mt-0'>Subscribe</button>
         </div>
       </div>
 

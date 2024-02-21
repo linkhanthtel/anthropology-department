@@ -12,30 +12,32 @@ function Navbar() {
   const [aboutIsToggle, setAboutIsToggle] = useState(false);
 
   return (
-    <div className='p-3 w-full bg-white text-slate-900 drop-shadow shadow-lg grid md:flex justify-between'>
-      <Link to="/" className='flex justify-center items-center'>
+    <div className='p-2 w-full bg-white text-slate-900 drop-shadow shadow-lg flex justify-between'>
+      <Link to="/" className='hidden md:flex justify-center items-center'>
         <img src={anthro} alt="Image" className="w-[60px]" />
       </Link>
       <div className='hidden justify-center items-center md:flex'>
-        <Link to="/" className='mx-4 text-xl'>Home</Link>
-        <button onClick={() => setAboutIsToggle(prev => !prev)} className='mx-4 text-xl'>
+        <Link to="/" className='mx-4 text-lg'>Home</Link>
+        <button onClick={() => setAboutIsToggle(prev => !prev)} className='mx-4 text-lg'>
           <div className='flex'>
             <p>About</p>
             <MdOutlineExpandMore className='my-auto' />
           </div>
         </button>
         {aboutIsToggle ? (
-          <div className='absolute top-20 bg-white text-slate-900 border-2 ml-2 px-10 py-4'>
+          <div className='absolute left-96 top-20 w-96 h-80 bg-white text-slate-900 text-center border-2 ml-6 px-10 py-4'>
             <div className='flex flex-col'>
-              <Link to='/about' className='my-5 text-xl' onClick={() => setAboutIsToggle(false)}>About Us</Link>
-              <Link to='/about/museum' className='my-5 text-xl' onClick={() => setAboutIsToggle(false)}>Museum</Link>
-              <Link to='/about/library' className='my-5 text-xl' onClick={() => setAboutIsToggle(false)}>Library</Link>
+              <Link to='/about' className='my-5 text-lg' onClick={() => setAboutIsToggle(false)}>About Us</Link>
+              <Link to='/about/museum' className='my-5 text-lg' onClick={() => setAboutIsToggle(false)}>Museum</Link>
+              <Link to='/about/library' className='my-5 text-lg' onClick={() => setAboutIsToggle(false)}>Library</Link>
             </div>
           </div>
         ) : (
           <div></div>
         )}
-        <Link to="/program" className='mx-4 text-xl'>Program</Link>
+        <Link to="/program" className='mx-4 text-lg'>Program</Link>
+        <Link className='mx-4 text-lg'>Research</Link>
+        <Link className='mx-4 text-lg'>Field of Study</Link>
       </div>
       <div className='hidden md:flex'>
       <div className='mx-auto my-3 grid grid-cols-5 gap-3 text-center items-center'>
@@ -50,11 +52,11 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <div className='cursor-pointer text-center mr-1 md:hidden text-xl'>
+      <div className='cursor-pointer mr-1 md:hidden text-xl'>
         <button onClick={() => setIsToggle(prev => !prev)} className='text-5xl'><GiHamburgerMenu /></button>
         {isToggle ? (
-          <div className='h-screen w-full'>
-            <div className='flex flex-col justify-center items-center'>
+          <div>
+            <div className='absolute bg-white border-2 border-gray-300 w-96 h-96 flex flex-col items-center'>
               <Link to='/' className='my-5' onClick={() => setIsToggle(false)}>Home</Link>
               <Link to='/about' className='my-5' onClick={() => setIsToggle(false)}>About</Link>
               <Link to='/about/museum' className='my-5' onClick={() => setIsToggle(false)}>Museum</Link>
