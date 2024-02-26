@@ -35,7 +35,7 @@ function Contact() {
           </form>
           <div className='text-black text-start flex flex-col mt-5'>
             <p className='pt-3'>Address : Ramanya Hall, University of Yangon (Main Campus), Pyay Road, Yangon</p>
-            <p className='pt-3'>Telephone : +12345678</p>
+            <p className='pt-3'>Telephone : +95 9 254077935</p>
             <p className='pt-3'>Email : dal.uy.edu@gmail.com</p>
             <p className='pt-3 animate-pulse text-red-500'> * The department is temporarily closed due to current political situations.</p>
           </div>

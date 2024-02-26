@@ -6,6 +6,7 @@ import { IoLogoFacebook } from "react-icons/io5";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import anthro from '../assets/anthropology.jpg';
+import { motion } from 'framer-motion';
 
 function Navbar() {
   const [isToggle, setIsToggle] = useState(false);
@@ -36,8 +37,6 @@ function Navbar() {
           <div></div>
         )}
         <Link to="/program" className='mx-4 text-lg'>Program</Link>
-        <Link className='mx-4 text-lg'>Research</Link>
-        <Link className='mx-4 text-lg'>Field of Study</Link>
       </div>
       <div className='hidden md:flex'>
       <div className='mx-auto my-3 grid grid-cols-5 gap-3 text-center items-center'>
@@ -55,15 +54,19 @@ function Navbar() {
       <div className='cursor-pointer mr-1 md:hidden text-xl'>
         <button onClick={() => setIsToggle(prev => !prev)} className='text-5xl'><GiHamburgerMenu /></button>
         {isToggle ? (
-          <div>
-            <div className='absolute bg-white border-2 border-gray-300 w-96 h-96 flex flex-col items-center'>
+          <motion.div
+            initial={{ capacity: 0, x: -100 }}
+            animate={{ capacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <div className='absolute bg-white border-2 border-gray-300 w-screen h-screen flex flex-col items-center'>
               <Link to='/' className='my-5' onClick={() => setIsToggle(false)}>Home</Link>
               <Link to='/about' className='my-5' onClick={() => setIsToggle(false)}>About</Link>
               <Link to='/about/museum' className='my-5' onClick={() => setIsToggle(false)}>Museum</Link>
               <Link to='/about/library' className='my-5' onClick={() => setIsToggle(false)}>Library</Link>
               <Link to='/program' className='my-5' onClick={() => setIsToggle(false)}>Program</Link>
             </div>
-          </div>
+          </motion.div>
         ) : (
           <div></div>
         )}
