@@ -5,6 +5,7 @@ import About from './pages/about'
 import Museum from './pages/museum'
 import Library from './pages/library'
 import Program from './pages/program'
+import Footer from './components/footer'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path='/about/library' element={<Library />} />
           <Route path='/program' element={<Program />} />
         </Routes>
+      <Footer />
       </BrowserRouter>
     </div>
   )
