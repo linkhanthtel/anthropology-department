@@ -13,7 +13,7 @@ function About() {
     <div>
       {/* About Department */}
       <div 
-      className="flex flex-col text-center h-full w-screen py-5 md:py-28 bg-[url('./assets/image.png')]" >
+      className="flex flex-col text-center h-full w-screen py-5 md:py-28 bg-gray-300" >
         <div
           className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
           >
@@ -72,7 +72,7 @@ function About() {
       <div className='bg-white flex flex-row text-start h-full w-screen py-5 md:py-28'>
         <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         <h1 className='py-5 text-3xl md:px-10 text-center md:w-[50%]'>Anthropology Museum</h1>
-        <p className='text-center text-lg md:px-10 md:text-start md:w-[50%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis possimus praesentium incidunt iste. Aspernatur quia ad ipsa ullam eaque. Distinctio consectetur perferendis quas, voluptatem magnam voluptate voluptates nihil soluta ipsum.</p>
+        <p className='text-center text-lg md:px-10 md:text-start md:w-[50%]'>Department of Anthropology museum beckons visitors on a journey through the rich tapestry of Myanmar's diverse ethnic groups. Though small in size, the space brims with the stories and traditions of a vibrant land, meticulously curated within its intimate halls. The museum's heart lies in its collection of ancient tools.</p>
         </div>
         <div>
           <h1 className='px-10 hidden md:flex'>Image</h1>
@@ -86,7 +86,7 @@ function About() {
         </div>
         <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         <h1 className='py-5 text-3xl text-center md:pl-[50%]'>Anthropology Library</h1>
-        <p className='text-center text-lg md:px-10 md:text-end md:pl-[50%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis possimus praesentium incidunt iste. Aspernatur quia ad ipsa ullam eaque. Distinctio consectetur perferendis quas, voluptatem magnam voluptate voluptates nihil soluta ipsum.</p>
+        <p className='text-center text-lg md:px-10 md:text-end md:pl-[50%]'>Department of Anthropology library is more than just a place to read – it's a space for learning, dialogue, and discovery. The carefully designed space invites interaction and collaboration. Comfortable reading areas and quiet study nooks provide the perfect environment for focused learning.</p>
         </div>
       </div>
 

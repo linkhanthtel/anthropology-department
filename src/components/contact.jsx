@@ -28,9 +28,9 @@ function Contact() {
         <h1 className='text-center text-black text-xl'>Contact Us</h1>
         <div className='grid grid-cols-1 md:grid-cols-2'>
           <form ref={form} onSubmit={sendEmail} className='flex flex-col justify-center items-center'>
-            <input type="text" placeholder='Name' name='user_name' className='my-4 mx-3 w-96 p-3' />
-            <input type="text" placeholder='Email' name='user_email' className='my-4 mx-3 w-96 p-3' />
-            <textarea name="message" cols="30" rows="10" className='my-4 mx-3 w-96 p-3' placeholder='Message'></textarea>
+            <input required type="text" placeholder='Name' name='user_name' className='my-4 mx-3 w-96 p-3' />
+            <input required type="text" placeholder='Email' name='user_email' className='my-4 mx-3 w-96 p-3' />
+            <textarea required name="message" cols="30" rows="10" className='my-4 mx-3 w-96 p-3' placeholder='Message'></textarea>
             <input type="submit" value="Send" className='p-5 text-white bg-yellow-600 rounded-md hover:bg-yellow-800 w-fit' />
           </form>
           <div className='text-black text-start flex flex-col mt-5'>
