@@ -1,5 +1,4 @@
 import React from 'react'
-import { MdEmail } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import Contact from '../components/contact';
 
@@ -7,9 +6,9 @@ function Home() {
   return (
     <div>
       {/* hero */}
-      <div className="h-full w-screen py-36 text-center">
-        <h1 className='text-3xl text-black font-bold py-5'>Home of Anthropology</h1>
-        <p className='text-black text-xl md:px-40'>Welcome to official page of Department of Anthropology, University of Yangon. Explore more about the history of our department and facilities. With the aims of sharing the latest updates about the department.</p>
+      <div className="bg-[url('./assets/hero.jpg')] bg-no-repeat bg-cover h-full w-screen py-36 text-center">
+        <h1 className='text-3xl text-white font-bold py-5'>Home of Anthropology</h1>
+        <p className='text-white text-xl md:px-40'>Welcome to official page of Department of Anthropology, University of Yangon. Explore more about the history of our department and facilities. With the aims of sharing the latest updates about the department.</p>
         <div className='flex justify-center items-center'>
           <div className='p-3 my-5 w-fit bg-yellow-600 rounded-full text-white transition ease-in-out delay-150 hover:bg-yellow-800 hover:-translate-y-1 hover:scale-110 duration-300'>
             <Link to="/about">Learn More</Link>
