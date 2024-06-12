@@ -41,13 +41,13 @@ function Navbar() {
       <div className='hidden md:flex'>
       <div className='mx-auto my-3 grid grid-cols-5 gap-3 text-center items-center'>
           <div>
-            <a href="#"><IoLogoFacebook className='text-3xl'/></a>
+            <a href="https://www.facebook.com/anthro.uy"><IoLogoFacebook className='text-3xl'/></a>
           </div>
           <div>
-            <a href="#"><FaInstagramSquare className='text-3xl' /></a>
+            <a href="https://www.instagram.com/anthro_mm/"><FaInstagramSquare className='text-3xl' /></a>
           </div>
           <div>
-            <a href="#"><FaLinkedin className='text-3xl' /></a>
+            <a href="https://www.linkedin.com/company/anthropology-uy"><FaLinkedin className='text-3xl' /></a>
           </div>
         </div>
       </div>

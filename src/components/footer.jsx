@@ -11,13 +11,13 @@ function Footer() {
 
         <div className='mx-auto grid grid-cols-3 gap-3 text-center'>
           <div>
-            <a href="#"><IoLogoFacebook className='text-xl'/></a>
+            <a href="https://www.facebook.com/anthro.uy"><IoLogoFacebook className='text-xl'/></a>
           </div>
           <div>
-            <a href="#"><FaInstagramSquare className='text-xl' /></a>
+            <a href="https://www.instagram.com/anthro_mm/"><FaInstagramSquare className='text-xl' /></a>
           </div>
           <div>
-            <a href="#"><FaLinkedin className='text-xl' /></a>
+            <a href="https://www.linkedin.com/company/anthropology-uy"><FaLinkedin className='text-xl' /></a>
           </div>
         </div>
 
