@@ -13,7 +13,7 @@ function About() {
     <div>
       {/* About Department */}
       <div 
-      className="flex flex-col text-center h-full w-screen py-5 md:py-28 bg-gray-300" >
+      className="flex flex-col text-center h-full w-screen py-5 md:py-28" >
         <div
           className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
           >
@@ -52,7 +52,7 @@ function About() {
         </div>
       </div>
 
-      <div className='bg-gray-400 flex flex-col text-center h-full w-screen py-5 md:py-28' >
+      <div className='flex flex-col text-center h-full w-screen py-5 md:py-28' >
         <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         <h1 className='py-5 text-3xl'>Mission and Vision</h1>
         <div className='px-2 md:px-10 text-lg text-justify'>
@@ -69,7 +69,7 @@ function About() {
       </div>
 
       {/* Museum */}
-      <div className='bg-white flex flex-row text-start h-full w-screen py-5 md:py-28'>
+      <div className='flex flex-row text-start h-full w-screen py-5 md:py-28'>
         <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         <h1 className='py-5 text-3xl md:px-10 text-center md:w-[50%]'>Anthropology Museum</h1>
         <p className='text-center text-lg md:px-10 md:text-start md:w-[50%]'>Department of Anthropology museum beckons visitors on a journey through the rich tapestry of Myanmar's diverse ethnic groups. Though small in size, the space brims with the stories and traditions of a vibrant land, meticulously curated within its intimate halls. The museum's heart lies in its collection of ancient tools.</p>
@@ -80,7 +80,7 @@ function About() {
       </div>
 
       {/* Library */}
-      <div className='bg-gray-300 flex flex-row text-end h-full py-5 md:py-28 w-screen'>
+      <div className='flex flex-row text-end h-full py-5 md:py-28 w-screen'>
         <div>
           <h1 className='px-10 hidden md:flex'>Image</h1>
         </div>

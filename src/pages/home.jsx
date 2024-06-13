@@ -28,7 +28,7 @@ function Home() {
       </div>
 
       {/* About Section */}
-      <div className='grid grid-cols-1 text-slate-900 md:grid-cols-3 gap-2 bg-white'>
+      <div className='grid grid-cols-1 text-black md:grid-cols-3 gap-2 bg-white'>
         <div className='flex flex-col justify-center text-center my-5 px-5 py-4'>
           <span className='text-lg my-3'>About</span>
           <p className='text-justify'>The Department started small, with few staff and students but then expanded to include Sociology and even International Relations for a few years until Anthropology was reduced to a minor subject status under the new education system in 1964. Anthropology can be taken by Arts students as well as Science students. Science students taking Anthropology as a minor subject can earn a B.A Degree. Post-graduate students have to carry out field research and collect survey data for their Masters thesis.</p>

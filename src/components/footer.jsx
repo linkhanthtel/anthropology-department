@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className='p-5 bg-slate-900 text-white flex justify-center'>
+    <div className='p-5 bg-yellow-300 text-black flex justify-center'>
       <div className='flex flex-col text-center'>
         <div className='text-xl pb-3'>Follow us on</div>
 
@@ -21,7 +21,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className='text-white text-center hidden md:flex flex-col mt-5'>
+        <div className='text-center hidden md:flex flex-col mt-5'>
             <p className='pt-3'>Address : Ramanya Hall, University of Yangon (Main Campus), Pyay Road, Yangon</p>
             <p className='pt-3'>Telephone : +95 9 254077935</p>
             <p className='pt-3'>Email : dal.uy.edu@gmail.com</p>

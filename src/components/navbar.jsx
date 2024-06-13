@@ -13,7 +13,7 @@ function Navbar() {
   const [aboutIsToggle, setAboutIsToggle] = useState(false);
 
   return (
-    <div className='p-2 w-full bg-white text-slate-900 drop-shadow shadow-lg flex justify-between'>
+    <div className='p-2 w-full bg-white text-black drop-shadow shadow-lg flex justify-between'>
       <Link to="/" className='hidden md:flex justify-center items-center'>
         <img src={anthro} alt="Image" className="w-[60px]" />
       </Link>
@@ -26,7 +26,7 @@ function Navbar() {
           </div>
         </button>
         {aboutIsToggle ? (
-          <div className='absolute left-96 top-20 w-96 h-80 bg-white text-slate-900 text-center border-2 ml-6 px-10 py-4'>
+          <div className='absolute left-96 top-20 w-96 h-80 bg-white text-black text-center border-2 ml-6 px-10 py-4'>
             <div className='flex flex-col'>
               <Link to='/about' className='my-5 text-lg' onClick={() => setAboutIsToggle(false)}>About Us</Link>
               <Link to='/about/museum' className='my-5 text-lg' onClick={() => setAboutIsToggle(false)}>Museum</Link>
