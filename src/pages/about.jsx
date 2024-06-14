@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import library from '../assets/library.jpg'
+import museum2 from '../assets/museum2.jpg'
 
 function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -52,7 +53,8 @@ function About() {
         </div>
       </div>
 
-      <div className='flex flex-col text-center h-full w-screen py-5 md:py-28' >
+      {/* Mission and Vision */}
+      <div className='flex flex-col text-center h-full w-screen py-5 md:py-20' >
         <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         <h1 className='py-5 text-3xl'>Mission and Vision</h1>
         <div className='px-2 md:px-10 text-lg text-justify'>
@@ -69,25 +71,29 @@ function About() {
       </div>
 
       {/* Museum */}
-      <div className='flex flex-row text-start h-full w-screen py-5 md:py-28'>
+      <div className='flex flex-col md:flex-row text-start h-full w-screen py-5 md:py-20'>
         <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-        <h1 className='py-5 text-3xl md:px-10 text-center md:w-[50%]'>Anthropology Museum</h1>
-        <p className='text-center text-lg md:px-10 md:text-start md:w-[50%]'>Department of Anthropology museum beckons visitors on a journey through the rich tapestry of Myanmar's diverse ethnic groups. Though small in size, the space brims with the stories and traditions of a vibrant land, meticulously curated within its intimate halls. The museum's heart lies in its collection of ancient tools.</p>
+        <h1 className='py-5 text-3xl md:px-10 text-center'>Anthropology Museum</h1>
+        <p className='text-center text-lg md:px-10 md:text-start'>Department of Anthropology museum beckons visitors on a journey through the rich tapestry of Myanmar's diverse ethnic groups. Though small in size, the space brims with the stories and traditions of a vibrant land, meticulously curated within its intimate halls. The museum's heart lies in its collection of ancient tools.</p>
         </div>
-        <div>
-          <h1 className='px-10 hidden md:flex'>Image</h1>
-        </div>
+        <div className='my-4 flex justify-center'>
+            <img className='w-screen h-full' src={museum2} alt="Museum Image" />
+          </div>
       </div>
 
       {/* Library */}
-      <div className='flex flex-row text-end h-full py-5 md:py-28 w-screen'>
-        <div>
-          <h1 className='px-10 hidden md:flex'>Image</h1>
-        </div>
-        <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-        <h1 className='py-5 text-3xl text-center md:pl-[50%]'>Anthropology Library</h1>
-        <p className='text-center text-lg md:px-10 md:text-end md:pl-[50%]'>Department of Anthropology library is more than just a place to read – it's a space for learning, dialogue, and discovery. The carefully designed space invites interaction and collaboration. Comfortable reading areas and quiet study nooks provide the perfect environment for focused learning.</p>
-        </div>
+      <div className='md:mx-5 flex flex-col md:flex-row text-end py-5 md:py-20 w-screen'>
+
+          <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <h1 className='py-5 text-3xl md:px-10 text-center'>Anthropology Library</h1>
+            <p className='text-center text-lg md:px-10 md:text-start'>Department of Anthropology library is more than just a place to read – it's a space for learning, dialogue, and discovery. The carefully designed space invites interaction and collaboration. Comfortable reading areas and quiet study nooks provide the perfect environment for focused learning.</p>
+          </div>
+
+          <div className='my-4 flex justify-center'>
+            <img className='w-screen h-96' src={library} alt="Library Image" />
+          </div>
+
+
       </div>
 
     </div>
