@@ -4,10 +4,9 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth"
 import { getFirestore } from "firebase/firestore"
 
 // Your web app's Firebase configuration
-// "anthropology-department.firebaseapp.com"
 const firebaseConfig = {
   apiKey: "AIzaSyDVVFHr3Q4-tbFUA2uGyKNDB5Q6NApXc9s",
-  authDomain: "https://anthropology-department.vercel.app/", 
+  authDomain: "anthropology-department.firebaseapp.com",
   projectId: "anthropology-department",
   storageBucket: "anthropology-department.appspot.com",
   messagingSenderId: "918034390286",
