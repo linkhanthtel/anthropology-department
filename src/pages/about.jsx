@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import library from '../assets/library.jpg'
-import museum2 from '../assets/museum2.jpg'
 
 function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -70,22 +69,11 @@ function About() {
         </div>
       </div>
 
-      {/* Museum */}
-      <div className='flex flex-col justify-center md:flex-row text-start h-full w-screen py-5 md:py-20'>
-        <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-        <h1 className='py-5 text-3xl md:px-10 text-center'>Anthropology Museum</h1>
-        <p className='text-center text-lg md:px-10 md:text-start'>Department of Anthropology museum beckons visitors on a journey through the rich tapestry of Myanmar's diverse ethnic groups. Though small in size, the space brims with the stories and traditions of a vibrant land, meticulously curated within its intimate halls. The museum's heart lies in its collection of ancient tools. By carefully showcasing these artifacts, the museum invites visitors to step beyond the familiar and appreciate the intricate beauty and enduring strength of Myanmar's diverse ethnic communities. It's a place where the past comes alive, inspiring respect, empathy, and a deeper understanding of the incredible human mosaic that makes up Myanmar.</p>
-        </div>
-        <div className='my-4 flex justify-center'>
-            <img className='w-100 h-fit px-5 md:px-10' src={museum2} alt="Museum Image" />
-        </div>
-      </div>
-
       {/* Library */}
       <div className='flex flex-col justify-center md:flex-row h-full w-screen py-5 md:py-20'>
-          <div className='w-full h-fit my-4 flex justify-center'>
-            <img className='w-100 h-96' src={library} alt="Library Image" />
-          </div>
+      <div className='my-4 flex justify-center'>
+            <img className='w-screen px-5 md:px-10' src={library} alt="Library Image" />
+        </div>
 
           <div className={`w-fit transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <h1 className='py-5 text-3xl md:px-10 text-center'>Anthropology Library</h1>
