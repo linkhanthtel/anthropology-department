@@ -5,21 +5,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoLogoFacebook } from "react-icons/io5";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
 import anthro from '../assets/anthropology.jpg';
 import { motion } from 'framer-motion';
-import { auth, provider } from '../config/firebase.js';
-import { signInWithPopup } from 'firebase/auth';
+import Auth from './auth';
 
 function Navbar() {
   const [isToggle, setIsToggle] = useState(false);
   const [aboutIsToggle, setAboutIsToggle] = useState(false);
-
-  //Sign In Method
-  const signInWithGoogle = async () => {
-    const result = await signInWithPopup(auth, provider);
-    console.log(result);
-  };
 
   return (
     <div className='p-4 w-full bg-white text-black drop-shadow shadow-lg flex justify-between'>
@@ -51,23 +43,21 @@ function Navbar() {
       </div>
 
       <div className='hidden md:flex'>
-      <div className='mx-auto my-3 grid grid-cols-5 gap-3 text-center items-center'>
+      <div className='mx-auto my-3 grid grid-cols-5 gap-4 text-center items-center'>
           <div>
-            <a href="https://www.facebook.com/anthro.uy"><IoLogoFacebook className='text-3xl'/></a>
+            <a href="https://www.facebook.com/anthro.uy"><IoLogoFacebook className='text-3xl text-blue-500'/></a>
           </div>
           <div>
-            <a href="https://www.instagram.com/anthro_mm/"><FaInstagramSquare className='text-3xl' /></a>
+            <a href="https://www.instagram.com/anthro_mm/"><FaInstagramSquare className='text-3xl text-red-400' /></a>
           </div>
           <div>
-            <a href="https://www.linkedin.com/company/anthropology-uy"><FaLinkedin className='text-3xl' /></a>
+            <a href="https://www.linkedin.com/company/anthropology-uy"><FaLinkedin className='text-3xl text-blue-700' /></a>
           </div>
         </div>
       </div>
 
       <div className='hidden md:flex justify-center'>
-        <div className='flex justify-center self-center'>
-          <button className='px-3 py-2 mx-2 flex border border-black rounded-lg' onClick={signInWithGoogle}>Sign In with Google<FcGoogle className='text-2xl mx-2 self-center' /></button>
-        </div>
+        <Auth />
       </div>
 
       <div className='cursor-pointer mr-1 md:hidden text-xl'>
@@ -76,14 +66,28 @@ function Navbar() {
           <motion.div
             initial={{ capacity: 0, x: -100 }}
             animate={{ capacity: 1, x: -10 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.5 }}
           >
             <div className='absolute bg-white border-2 border-gray-300 w-screen h-screen flex flex-col items-center'>
+              <div className='flex justify-center items-center'>
+                <img src={anthro} alt="Image" className="w-[60px]" />
+              </div>
               <Link to='/' className='my-5' onClick={() => setIsToggle(false)}>Home</Link>
               <Link to='/about' className='my-5' onClick={() => setIsToggle(false)}>About</Link>
               <Link to='/about/museum' className='my-5' onClick={() => setIsToggle(false)}>Museum</Link>
               <Link to='/about/library' className='my-5' onClick={() => setIsToggle(false)}>Library</Link>
               <Link to='/program' className='my-5' onClick={() => setIsToggle(false)}>Program</Link>
+              <div className='my-3 grid grid-cols-3 gap-4 text-center items-center'>
+                <div>
+                  <a href="https://www.facebook.com/anthro.uy"><IoLogoFacebook className='text-3xl text-blue-500'/></a>
+                </div>
+                <div>
+                  <a href="https://www.instagram.com/anthro_mm/"><FaInstagramSquare className='text-3xl text-red-400' /></a>
+                </div>
+                <div>
+                  <a href="https://www.linkedin.com/company/anthropology-uy"><FaLinkedin className='text-3xl text-blue-700' /></a>
+                </div>
+            </div>
             </div>
           </motion.div>
         ) : (

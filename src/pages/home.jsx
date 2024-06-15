@@ -1,12 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Contact from '../components/contact';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Home() {
+  const newsLetterNotify = () => {
+    toast('Thanks for subscribing to our newsletter!');
+  }
   return (
     <div>
       {/* hero */}
-      <div className="bg-[url('./assets/hero.jpg')] bg-no-repeat bg-cover h-full w-screen py-36 text-center">
+      <div className="bg-[url('./assets/hero.jpg')] bg-no-repeat bg-cover h-100 w-screen py-36 text-center">
         <h1 className='text-3xl text-white font-bold py-5'>Home of Anthropology</h1>
         <p className='text-white text-xl md:px-40'>Welcome to official page of Department of Anthropology, University of Yangon. Explore more about the history of our department and facilities. With the aims of sharing the latest updates about the department.</p>
         <div className='flex justify-center items-center'>
@@ -19,11 +24,11 @@ function Home() {
       {/* Newsletter */}
       <div className='md:flex justify-center py-10 px-3 bg-gray-200'>
         <div className='flex justify-center items-center'>
-          {/* <MdEmail className='text-5xl text-slate-900 flex justify-center' /> */}
-          <input type="text" placeholder='Sign Up to our newsletter' className='mr-3 p-3 rounded-sm h-10 w-80' />
-        </div>
-        <div className='flex justify-center items-center md:mt-1'>
-          <button onClick={() => {alert('Thanks for your interest. Our newsletter is currently in process.')}} className='p-2 bg-yellow-600 text-white hover:bg-yellow-800 mt-2 md:mb-1 md:mt-0'>Subscribe</button>
+          <input required type="text" placeholder='Sign Up to our newsletter' className='mr-3 p-3 rounded-sm h-10 w-80' />
+          <div className='flex justify-center items-center md:mt-1'>
+            <button type='submit' onClick={newsLetterNotify} className='p-2 bg-yellow-600 text-white hover:bg-yellow-800 mt-2 md:mb-1 md:mt-0'>Subscribe</button>
+            <ToastContainer />
+          </div>
         </div>
       </div>
 

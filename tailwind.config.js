@@ -8,6 +8,7 @@ export default {
     extend: {
       backgroundImage: {
         'hero-pattern': "url('./assets/hero.jpg')",
+        'about-cover': "url('./assets/convocationhall.jpg')",
       }
     },
   },

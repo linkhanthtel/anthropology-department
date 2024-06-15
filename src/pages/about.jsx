@@ -14,7 +14,7 @@ function About() {
     <div>
       {/* About Department */}
       <div 
-      className="flex flex-col text-center h-full w-screen py-5 md:py-28" >
+      className="flex flex-col text-center h-auto w-screen py-5 md:py-28" >
         <div
           className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
           >
@@ -54,7 +54,7 @@ function About() {
       </div>
 
       {/* Mission and Vision */}
-      <div className='flex flex-col text-center h-full w-screen py-5 md:py-20' >
+      <div className="bg-[url('./assets/convocationhall.jpg')] bg-cover bg-center bg-no-repeat bg-opacity-50 text-white flex flex-col text-center h-full w-screen py-5 md:py-20" >
         <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         <h1 className='py-5 text-3xl'>Mission and Vision</h1>
         <div className='px-2 md:px-10 text-lg text-justify'>
@@ -71,29 +71,27 @@ function About() {
       </div>
 
       {/* Museum */}
-      <div className='flex flex-col md:flex-row text-start h-full w-screen py-5 md:py-20'>
+      <div className='flex flex-col justify-center md:flex-row text-start h-full w-screen py-5 md:py-20'>
         <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         <h1 className='py-5 text-3xl md:px-10 text-center'>Anthropology Museum</h1>
-        <p className='text-center text-lg md:px-10 md:text-start'>Department of Anthropology museum beckons visitors on a journey through the rich tapestry of Myanmar's diverse ethnic groups. Though small in size, the space brims with the stories and traditions of a vibrant land, meticulously curated within its intimate halls. The museum's heart lies in its collection of ancient tools.</p>
+        <p className='text-center text-lg md:px-10 md:text-start'>Department of Anthropology museum beckons visitors on a journey through the rich tapestry of Myanmar's diverse ethnic groups. Though small in size, the space brims with the stories and traditions of a vibrant land, meticulously curated within its intimate halls. The museum's heart lies in its collection of ancient tools. By carefully showcasing these artifacts, the museum invites visitors to step beyond the familiar and appreciate the intricate beauty and enduring strength of Myanmar's diverse ethnic communities. It's a place where the past comes alive, inspiring respect, empathy, and a deeper understanding of the incredible human mosaic that makes up Myanmar.</p>
         </div>
         <div className='my-4 flex justify-center'>
-            <img className='w-screen h-full' src={museum2} alt="Museum Image" />
-          </div>
+            <img className='w-100 h-fit px-5 md:px-10' src={museum2} alt="Museum Image" />
+        </div>
       </div>
 
       {/* Library */}
-      <div className='md:mx-5 flex flex-col md:flex-row text-end py-5 md:py-20 w-screen'>
+      <div className='flex flex-col justify-center md:flex-row h-full w-screen py-5 md:py-20'>
+          <div className='w-full h-fit my-4 flex justify-center'>
+            <img className='w-100 h-96' src={library} alt="Library Image" />
+          </div>
 
-          <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <div className={`w-fit transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <h1 className='py-5 text-3xl md:px-10 text-center'>Anthropology Library</h1>
-            <p className='text-center text-lg md:px-10 md:text-start'>Department of Anthropology library is more than just a place to read – it's a space for learning, dialogue, and discovery. The carefully designed space invites interaction and collaboration. Comfortable reading areas and quiet study nooks provide the perfect environment for focused learning.</p>
+            <p className='text-lg md:px-10 md:text-end'>Department of Anthropology library is more than just a place to read – it's a space for learning, dialogue, and discovery. The carefully designed space invites interaction and collaboration. Comfortable reading areas and quiet study nooks provide the perfect environment for focused learning. Beyond Myanmar, the library extends its reach to encompass the wider world of social sciences. Texts on general anthropology offer a comparative perspective, allowing you to explore the myriad ways in which societies across the globe have evolved and interacted. Books on research methodology equip students and researchers with the tools they need to delve deeper into the complexities of human societies.</p>
           </div>
-
-          <div className='my-4 flex justify-center'>
-            <img className='w-screen h-96' src={library} alt="Library Image" />
-          </div>
-
-
+          
       </div>
 
     </div>
