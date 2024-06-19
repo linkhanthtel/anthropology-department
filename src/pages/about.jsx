@@ -16,7 +16,7 @@ function About() {
       <div 
       className="flex flex-col text-center h-auto w-screen py-5 md:py-28" >
         <motion.div
-          initial={{y: 100, opacity: 0}}
+          initial={{y: 70, opacity: 0}}
           animate={{y: 0, opacity: 1}}
           transition={{ duration: 2.5 }}
           className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
@@ -59,7 +59,7 @@ function About() {
       {/* Mission and Vision */}
       <div className="bg-[url('./assets/hero3.jpg')] bg-cover bg-center bg-no-repeat bg-scroll opacity-90 text-white flex flex-col text-center h-full w-screen py-5 md:py-20" >
         <motion.div
-          initial={{y: 100, opacity: 0}}
+          initial={{y: 70, opacity: 0}}
           whileInView={{y: 0, opacity: 1}}
           transition={{ duration: 2.5 }}
         >
@@ -78,7 +78,11 @@ function About() {
       </div>
 
       {/* Library */}
-      <div className='flex flex-col justify-center md:flex-row h-full w-screen py-5 md:py-20'>
+      <motion.div
+        initial={{y: 70, opacity: 0}}
+        whileInView={{y: 0, opacity: 1}}
+        transition={{ duration: 2.5 }}
+        className='flex flex-col justify-center md:flex-row h-full w-screen py-5 md:py-20'>
       <div className='my-4 flex justify-center'>
             <img className='w-screen px-5 md:px-10' src={library} alt="Library Image" />
         </div>
@@ -88,7 +92,7 @@ function About() {
             <p className='text-lg md:px-10 md:text-end'>Department of Anthropology library is more than just a place to read – it's a space for learning, dialogue, and discovery. The carefully designed space invites interaction and collaboration. Comfortable reading areas and quiet study nooks provide the perfect environment for focused learning. Beyond Myanmar, the library extends its reach to encompass the wider world of social sciences. Texts on general anthropology offer a comparative perspective, allowing you to explore the myriad ways in which societies across the globe have evolved and interacted. Books on research methodology equip students and researchers with the tools they need to delve deeper into the complexities of human societies.</p>
           </div>
           
-      </div>
+      </motion.div>
 
     </div>
   )

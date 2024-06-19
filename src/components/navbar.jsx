@@ -65,7 +65,7 @@ function Navbar() {
         {isToggle ? (
           <motion.div
             initial={{ capacity: 0, x: -100 }}
-            animate={{ capacity: 1, x: -10 }}
+            animate={{ capacity: 1, x: -20 }}
             transition={{ duration: 0.5 }}
           >
             <div className='absolute bg-white border-2 border-gray-300 w-screen h-screen flex flex-col items-center'>
