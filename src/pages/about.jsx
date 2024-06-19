@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import library from '../assets/library.jpg'
+import { motion } from 'framer-motion'
 
 function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,7 +15,10 @@ function About() {
       {/* About Department */}
       <div 
       className="flex flex-col text-center h-auto w-screen py-5 md:py-28" >
-        <div
+        <motion.div
+          initial={{y: 100, opacity: 0}}
+          animate={{y: 0, opacity: 1}}
+          transition={{ duration: 2.5 }}
           className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
           >
         <h1 className='py-5 text-3xl'>History of Department</h1>
@@ -49,24 +53,28 @@ function About() {
 
           Now the number of Anthropology students increases annually and ranges from first year undergraduate students to Masters Research students specializing in Anthropology. PhD courses have been running since a/y 2006-2007.
           </p>}
-        </div>
+        </motion.div>
       </div>
 
       {/* Mission and Vision */}
-      <div className="bg-[url('./assets/convocationhall.jpg')] bg-cover bg-center bg-no-repeat bg-opacity-50 text-white flex flex-col text-center h-full w-screen py-5 md:py-20" >
-        <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div className="bg-[url('./assets/hero3.jpg')] bg-cover bg-center bg-no-repeat bg-scroll opacity-90 text-white flex flex-col text-center h-full w-screen py-5 md:py-20" >
+        <motion.div
+          initial={{y: 100, opacity: 0}}
+          whileInView={{y: 0, opacity: 1}}
+          transition={{ duration: 2.5 }}
+        >
         <h1 className='py-5 text-3xl'>Mission and Vision</h1>
-        <div className='px-2 md:px-10 text-lg text-justify'>
-          <ul className='list-disc'>
-            <li>To set up acceptable forms and functions of human diversity and cultures in the present and the past through intensive field work</li>
-            <li>To increase students’ knowledge and skills in the intellectual, social and economic development related to local and global Anthropology</li>
-            <li>To develop creative research, teaching and a leading voice for the practice of public, collaborative and community engaged Anthropology</li>
-            <li>To study bio-cultural diversity in the present and the past</li>
-            <li>To develop students’ skills in research and theories, writing and the application of Anthropological knowledge to enhance academic excellence and professional development</li>
-            <li>To offer the highest quality instruction in Anthropological implementation in community development</li>
+        <div className='px-2 md:px-10 text-lg text-center'>
+          <ul>
+            <li className='py-3'>To set up acceptable forms and functions of human diversity and cultures in the present and the past through intensive field work</li>
+            <li className='py-3'>To increase students’ knowledge and skills in the intellectual, social and economic development related to local and global Anthropology</li>
+            <li className='py-3'>To develop creative research, teaching and a leading voice for the practice of public, collaborative and community engaged Anthropology</li>
+            <li className='py-3'>To study bio-cultural diversity in the present and the past</li>
+            <li className='py-3'>To develop students’ skills in research and theories, writing and the application of Anthropological knowledge to enhance academic excellence and professional development</li>
+            <li className='py-3'>To offer the highest quality instruction in Anthropological implementation in community development</li>
           </ul>
         </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Library */}
