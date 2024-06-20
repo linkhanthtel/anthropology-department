@@ -23,7 +23,7 @@ function Footer() {
 
         <div className='text-center hidden md:flex flex-col mt-5'>
             <p className='pt-3'>Address : Ramanya Hall, University of Yangon (Main Campus), Pyay Road, Yangon</p>
-            <p className='pt-3'>Telephone : +95 9 254077935</p>
+            <p className='pt-3'>Telephone : +65 8762 5331, +95 9 254077935</p>
             <p className='pt-3'>Email : dal.uy.edu@gmail.com</p>
         </div>
 

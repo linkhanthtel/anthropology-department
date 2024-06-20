@@ -62,6 +62,7 @@ function About() {
           initial={{y: 70, opacity: 0}}
           whileInView={{y: 0, opacity: 1}}
           transition={{ duration: 2.5 }}
+          viewport={{ once: true }}
         >
         <h1 className='py-5 text-3xl'>Mission and Vision</h1>
         <div className='px-2 md:px-10 text-lg text-center'>
@@ -82,6 +83,7 @@ function About() {
         initial={{y: 70, opacity: 0}}
         whileInView={{y: 0, opacity: 1}}
         transition={{ duration: 2.5 }}
+        viewport={{ once: true }}
         className='flex flex-col justify-center md:flex-row h-full w-screen py-5 md:py-20'>
       <div className='my-4 flex justify-center'>
             <img className='w-screen px-5 md:px-10' src={library} alt="Library Image" />
